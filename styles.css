@@ -27,6 +27,10 @@ main {
   background-repeat: no-repeat;
 }
 
+.occult {
+  display: none;
+}
+
 .card {
   margin: 0 auto;
   width: 400px;

@@ -25,26 +25,30 @@
       </div>
     </div>
     
-    <form class="card-form">
+    <form id="card-form">
       <label for="name">CARDHOLDER NAME</label>
       <input type="text" id="name" name="name" placeholder="e.g. Jane Appleseed">
 
       <label for="card-number">CARD NUMBER</label>
-      <input type="text" id="card-number" placeholder="e.g. 1234 5678 9123 0000" maxlength="16" inputmode="numeric">
+      <input type="text" id="card-number" name="card-number" placeholder="e.g. 1234 5678 9123 0000" maxlength="16" inputmode="numeric">
 
       <div class="bottom-inputs-container">
         <div class="date-inputs-container">
           <label>EXP. DATE (MM/YY)</label>
-          <input id="MM" type="text" placeholder="MM" maxlength="2" inputmode="numeric">
-          <input id="YY" type="text" placeholder="YY" maxlength="2" inputmode="numeric">
+          <input id="MM" type="text" name="MM" placeholder="MM" maxlength="2" inputmode="numeric">
+          <input id="YY" type="text" name="YY" placeholder="YY" maxlength="2" inputmode="numeric">
         </div>
         <div class="cvc-container">
           <label for="CVC">CVC</label>
-          <input type="text" id="CVC" placeholder="e.g. 123" maxlength="3" inputmode="numeric">
+          <input type="text" id="CVC" name="CVC" placeholder="e.g. 123" maxlength="3" inputmode="numeric">
         </div>
       </div>
       <button id="btn-confirm">Confirm</button>
     </form>
+
+    <ul id="errorsText">
+
+    </ul>
 
     <!-- Completed state start -->
 

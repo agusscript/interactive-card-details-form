@@ -31,6 +31,10 @@ main {
   display: none;
 }
 
+.error {
+  border: 2px solid red;
+}
+
 .card {
   margin: 0 auto;
   width: 400px;
@@ -117,6 +121,7 @@ form input {
 form input:focus {
   border: none;
   border: 1px solid hsl(278, 94%, 30%);
+  background-color:  rgba(235, 235, 235, 0.637);
 }
 
 ::placeholder {

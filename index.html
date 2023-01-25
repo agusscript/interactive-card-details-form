@@ -19,36 +19,37 @@
         <span>JANE APPLESEED</span>
         <span class="front-card-date">00/00</span>
       </div>
-  
+
       <div class="back card">
         <p>000</p>
       </div>
     </div>
-    
+
     <form id="card-form">
       <label for="name">CARDHOLDER NAME</label>
       <input type="text" id="name" name="name" placeholder="e.g. Jane Appleseed">
+      <span id="nameError"></span>
 
       <label for="card-number">CARD NUMBER</label>
-      <input type="text" id="card-number" name="card-number" placeholder="e.g. 1234 5678 9123 0000" maxlength="16" inputmode="numeric">
+      <input type="text" id="card-number" name="card-number" placeholder="e.g. 1234 5678 9123 0000" maxlength="16">
+      <span id="cardNumberError"></span>
 
       <div class="bottom-inputs-container">
         <div class="date-inputs-container">
           <label>EXP. DATE (MM/YY)</label>
-          <input id="MM" type="text" name="MM" placeholder="MM" maxlength="2" inputmode="numeric">
-          <input id="YY" type="text" name="YY" placeholder="YY" maxlength="2" inputmode="numeric">
+          <input id="MM" type="text" name="MM" placeholder="MM" maxlength="2">
+          <input id="YY" type="text" name="YY" placeholder="YY" maxlength="2">
+          <span id="MMerror"></span>
+          <span id="YYerror"></span>
         </div>
         <div class="cvc-container">
           <label for="CVC">CVC</label>
-          <input type="text" id="CVC" name="CVC" placeholder="e.g. 123" maxlength="3" inputmode="numeric">
+          <input type="text" id="CVC" name="CVC" placeholder="e.g. 123" maxlength="3">
+          <span id="cvcError"></span>
         </div>
       </div>
       <button id="btn-confirm">Confirm</button>
     </form>
-
-    <ul id="errorsText">
-
-    </ul>
 
     <!-- Completed state start -->
 

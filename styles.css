@@ -32,7 +32,13 @@ main {
 }
 
 .error {
-  border: 2px solid red;
+  border: 1px solid red;
+}
+
+form span {
+  display: block;
+  font-size: 0.8rem;
+  color: red;
 }
 
 .card {
@@ -94,6 +100,7 @@ main {
 
 form {
   width: 370px;
+  animation: fade 1s;
 }
 
 form label {
@@ -121,7 +128,7 @@ form input {
 form input:focus {
   border: none;
   border: 1px solid hsl(278, 94%, 30%);
-  background-color:  rgba(235, 235, 235, 0.637);
+  background-color:  rgb(232, 240, 254);
 }
 
 ::placeholder {
@@ -159,16 +166,27 @@ form input:focus {
   font-family: "Space Grotesk", serif;
   font-weight: 500px;
   letter-spacing: 0.01rem;
+  transition: all 0.6s;
 }
 
 #btn-confirm:hover {
   cursor: pointer;
-  opacity: 0.6;
+  background-color: rgb(83, 52, 223);
 }
 
 .submitted-status {
-  width: 380px;
+  width: 370px;
   text-align: center;
+  animation: fade 1s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .submitted-status h2 {
@@ -195,11 +213,12 @@ form input:focus {
   font-family: "Space Grotesk", serif;
   font-weight: 500px;
   letter-spacing: 0.01rem;
+  transition: all 0.6s;
 }
 
 #btn-continue:hover {
   cursor: pointer;
-  opacity: 0.6;
+  background-color: rgb(83, 52, 223);
 }
 
 .bg-mobile {

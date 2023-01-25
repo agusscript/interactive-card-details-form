@@ -1,4 +1,5 @@
 const $form = document.querySelector("#card-form");
+const $buttonContinue = document.querySelector("#btn-continue");
 const userName = $form.name.value;
 const cardNumber = $form["card-number"].value;
 const YY = $form.YY.value;
@@ -92,7 +93,12 @@ function validateForm(event) {
 function manageErrors(errors) {
   const keys = Object.keys(errors);
   let numberOfErrors = 0;
-  const $errorTextContainer = document.querySelector("#errorsText");
+  const $nameErrorText = document.querySelector("#nameError");
+  const $cardNumberErrorText = document.querySelector("#cardNumberError");
+  const $MMerrorText = document.querySelector("#MMerror");
+  const $YYerrorText = document.querySelector("#YYerror");
+  const $cvcErrorText = document.querySelector("#cvcError");
+
 
   keys.forEach(function (key) {
     const error = errors[key];
@@ -100,10 +106,12 @@ function manageErrors(errors) {
     if (error) {
       numberOfErrors++;
       $form[key].className = "error";
-
-      const errorText = document.createElement("li");
-      errorText.textContent = error;
-      $errorTextContainer.appendChild(errorText);
+      $nameErrorText.textContent = errors.name;
+      $cardNumberErrorText.textContent = errors["card-number"];
+      $MMerrorText.textContent = errors.MM;
+      $YYerrorText.textContent = errors.YY;
+      $cvcErrorText.textContent = errors.CVC;
+      
     } else {
       $form[key].className = "";
     }
@@ -113,3 +121,7 @@ function manageErrors(errors) {
 }
 
 $form.onsubmit = validateForm;
+
+$buttonContinue.onclick = function() {
+  location.reload();
+}

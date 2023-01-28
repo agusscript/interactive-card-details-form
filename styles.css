@@ -66,14 +66,14 @@ form span {
   margin-top: 0.3rem;
 }
 
-.front p {
+.num-card {
   height: 1rem;
   font-size: 1.52rem;
   letter-spacing: 0.2rem;
   padding-top: 1.4rem;
 }
 
-.front span {
+.name-card {
   position: absolute;
   margin-top: 1.1rem;
   font-size: 0.8rem;
@@ -81,7 +81,14 @@ form span {
 }
 
 .front-card-date {
+  margin-top: 2.5rem;
   margin-left: 18.5rem;
+  font-size: 0.9rem;
+}
+
+.front-card-date span {
+  margin: -1.7px;
+  letter-spacing: 1px;
 }
 
 .back {
@@ -92,7 +99,7 @@ form span {
   margin-top: 2rem;
 }
 
-.back p {
+.cvc-card {
   position: absolute;
   margin-top: 5.8rem;
   margin-left: 314px;
@@ -334,7 +341,7 @@ form input:focus {
     width: 55px;
   }
   
-  .front p {
+  .num-card {
     height: 1rem;
     font-size: 1.25rem;
     letter-spacing: 0.15rem;
@@ -348,6 +355,7 @@ form input:focus {
   }
   
   .front-card-date {
+    margin-top: 1.65rem;
     margin-left: 14.5rem;
   }
 
@@ -358,7 +366,7 @@ form input:focus {
     margin-top: 1.1rem;
   }
 
-  .back p {
+  .cvc-card {
     position: absolute;
     margin-top: 4.9rem;
     margin-left: 252px;
@@ -413,7 +421,7 @@ form input:focus {
     width: 50px;
   }
   
-  .front p {
+  .num-card {
     height: 0.9rem;
     font-size: 1.1rem;
     letter-spacing: 0.1rem;
@@ -427,6 +435,8 @@ form input:focus {
   }
   
   .front-card-date {
+    width: 4rem;
+    margin-top: 1rem;
     margin-left: 12rem;
   }
 
@@ -437,7 +447,7 @@ form input:focus {
     margin-top: 1.1rem;
   }
 
-  .back p {
+  .cvc-card {
     position: absolute;
     margin-top: 4rem;
     margin-left: 208px;

@@ -15,13 +15,17 @@
     <div class="cards-container">
       <div class="front card">
         <img src="images/card-logo.svg" alt="circles logo">
-        <p>0000 0000 0000 0000</p>
-        <span>JANE APPLESEED</span>
-        <span class="front-card-date">00/00</span>
+        <p class="num-card">0000 0000 0000 0000</p>
+        <span class="name-card">JANE APPLESEED</span>
+        <div class="front-card-date">
+          <span class="MM-date">00</span>
+          <span>/</span>
+          <span class="YY-date">00</span>
+        </div>
       </div>
 
       <div class="back card">
-        <p>000</p>
+        <p class="cvc-card">000</p>
       </div>
     </div>
 
@@ -31,7 +35,7 @@
       <span id="nameError"></span>
 
       <label for="card-number">CARD NUMBER</label>
-      <input type="text" id="card-number" name="card-number" placeholder="e.g. 1234 5678 9123 0000" maxlength="16">
+      <input type="text" id="card-number" name="card-number" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
       <span id="cardNumberError"></span>
 
       <div class="bottom-inputs-container">

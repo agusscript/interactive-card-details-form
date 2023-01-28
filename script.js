@@ -1,5 +1,10 @@
 const $form = document.querySelector("#card-form");
 const $buttonContinue = document.querySelector("#btn-continue");
+const $cardNameInput = document.querySelector("#name");
+const $cardNumberInput = document.querySelector("#card-number");
+const $cardMonthInput = document.querySelector("#MM");
+const $cardYearInput = document.querySelector("#YY");
+const $cardCvcInput = document.querySelector("#CVC");
 const userName = $form.name.value;
 const cardNumber = $form["card-number"].value;
 const YY = $form.YY.value;
@@ -119,6 +124,60 @@ function manageErrors(errors) {
 
   return numberOfErrors;
 }
+
+function writeTextCard() {
+  const nameFrontCard = document.querySelector(".name-card");
+  const numberFrontCard = document.querySelector(".num-card");
+  const monthFrontCard = document.querySelector(".MM-date");
+  const yearFrontCard = document.querySelector(".YY-date");
+  const numberBackCard = document.querySelector(".cvc-card");
+
+  $cardNameInput.addEventListener("input", () => {
+    nameFrontCard.innerText = $cardNameInput.value;
+
+    if ($cardNameInput.value === "") {
+      nameFrontCard.innerText = "JANE APPLESEED";
+    }
+  });
+
+  $cardNumberInput.addEventListener("input", () => {
+    numberFrontCard.innerText = $cardNumberInput.value;
+
+    if ($cardNumberInput.value === "") {
+      numberFrontCard.innerText = "0000 0000 0000 0000";
+    }
+  });
+
+  $cardNumberInput.addEventListener("keyup", function(e){
+    e.target.value = e.target.value.replace(/[\s]/g, "").replace(/(.{4})/g, "$1 ").trim()
+  });
+
+  $cardMonthInput.addEventListener("input", () => {
+    monthFrontCard.innerText = $cardMonthInput.value;
+
+    if ($cardMonthInput.value === "") {
+      monthFrontCard.innerText = "00";
+    }
+  });
+
+  $cardYearInput.addEventListener("input", () => {
+    yearFrontCard.innerText = $cardYearInput.value;
+
+    if ($cardYearInput.value === "") {
+      yearFrontCard.innerText = "00";
+    }
+  });
+
+  $cardCvcInput.addEventListener("keyup", () => {
+    numberBackCard.innerText = $cardCvcInput.value;
+
+    if ($cardCvcInput.value === "") {
+      numberBackCard.innerText = "000";
+    }
+  });
+}
+
+writeTextCard();
 
 $form.onsubmit = validateForm;
 

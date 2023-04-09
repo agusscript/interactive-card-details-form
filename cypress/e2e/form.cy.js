@@ -14,4 +14,14 @@ describe("Card form tests", () => {
     cy.get(".submitted-status").should("not.be.visible");
   });
 
+  it("Fail validations form (blank fields)", () => {
+    cy.get("#btn-confirm").click();
+
+    cy.get(".text-error").then((error) => {
+      error.each((i, text) => {
+        cy.get(text).contains("This field cannot be blank");
+      });
+    });
+  });
+
 });

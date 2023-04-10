@@ -4,7 +4,7 @@
 
 This is a solution to the [Interactive card details form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Table of contents
+# Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
@@ -12,19 +12,20 @@ This is a solution to the [Interactive card details form challenge on Frontend M
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [Tests](#tests)
 - [Author](#author)
 
 
-## Overview
+# Overview
 
-### The challenge
+## The challenge
 
 Users should be able to:
 
 - View the optimal layout depending on their device's screen size
 - See hover and focus states for interactive elements
 
-### Screenshots
+## Screenshots
 
 - Desktop view
 
@@ -36,14 +37,14 @@ Users should be able to:
 
 ![](images/mobile-design.webp)
 
-### Links
+## Links
 
 - [Fron End Mentor solution](https://www.frontendmentor.io/solutions/interactive-card-details-form-solution-css-js-G8-6RylTCS)
-- [Live site](https://agusscript.github.io/Interactive-card-details-form/)
+- [Live site](https://agusscript.github.io/interactive-card-details-form/)
 
-## My process
+# My process
 
-### Built with
+## Built with
 
 <p>
  <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML">
@@ -64,6 +65,15 @@ Users should be able to:
 - JavaScript functions and DOM events
 - Regular expresions(RegEx)
 - Validations form
+
+## Tests
+
+### The UI was tested with 
+<a href="https://www.cypress.io/">
+<img src="https://img.shields.io/badge/-Cypress-gray?style=flat-square&logo=Cypress&logoColor=white" height="30" alt="Cypress"/>
+</a>
+
+![](images/cypress-form-card.png)
 
 ## Author
 

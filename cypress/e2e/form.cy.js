@@ -9,7 +9,7 @@ describe("Card form tests", () => {
     cy.get(".front").should("be.visible");
     cy.get(".back").should("be.visible");
     cy.get("#card-form").should("be.visible");
-    
+
     cy.get(".bg-mobile").should("not.be.visible");
     cy.get(".submitted-status").should("not.be.visible");
   });
@@ -24,4 +24,19 @@ describe("Card form tests", () => {
     });
   });
 
+  it("Fail validations form (invalid inputs)", () => {
+    cy.get("#name").type("Jesus123");
+    cy.get("#card-number").type("08231243abc");
+    cy.get("#MM").type("ab");
+    cy.get("#YY").type("cd");
+    cy.get("#CVC").type("12f");
+
+    cy.get("#btn-confirm").click();
+
+    cy.get("#nameError").contains("This field can only contain letters");
+    cy.get("#cardNumberError").contains("Invalid credit card number");
+    cy.get("#MMerror").contains("Invalid month format");
+    cy.get("#YYerror").contains("Invalid year format");
+    cy.get("#cvcError").contains("Invalid CVC format");
+  });
 });

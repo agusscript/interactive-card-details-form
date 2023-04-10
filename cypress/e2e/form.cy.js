@@ -14,7 +14,7 @@ describe("Card form tests", () => {
     cy.get(".submitted-status").should("not.be.visible");
   });
 
-  it("Fail validations form (blank fields)", () => {
+  it("Fail form validations (blank fields)", () => {
     cy.get("#btn-confirm").click();
 
     cy.get(".text-error").then((error) => {
@@ -24,7 +24,7 @@ describe("Card form tests", () => {
     });
   });
 
-  it("Fail validations form (invalid inputs)", () => {
+  it("Fail form validations (invalid inputs)", () => {
     cy.get("#name").type("Jesus123");
     cy.get("#card-number").type("08231243abc");
     cy.get("#MM").type("ab");
@@ -38,5 +38,18 @@ describe("Card form tests", () => {
     cy.get("#MMerror").contains("Invalid month format");
     cy.get("#YYerror").contains("Invalid year format");
     cy.get("#cvcError").contains("Invalid CVC format");
+  });
+
+  it("Pass form validations (correct inputs)", () => {
+    cy.reload();
+
+    cy.get("#name").type("Agustin Sanchez");
+    cy.get("#card-number").type("1234123412341234");
+    cy.get("#MM").type("12");
+    cy.get("#YY").type("23");
+    cy.get("#CVC").type("777");
+
+    cy.get("#btn-confirm").click();
+    cy.get("#btn-continue").click();
   });
 });

@@ -1,4 +1,6 @@
-# Frontend Mentor - Interactive card details form solution
+# Interactive card details form
+
+![](images/desktop-design.webp)
 
 This is a solution to the [Interactive card details form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
@@ -25,9 +27,6 @@ Users should be able to:
 ### Screenshots
 
 - Desktop view
-
-![](images/desktop-design.webp)
-
 
 ![](images/desktop-design-active.webp)
 
